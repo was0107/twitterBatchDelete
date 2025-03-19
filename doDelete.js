@@ -4,9 +4,8 @@ async function doDelete() {
 
   while(elements.length > 0) {
   	elements = document.getElementsByTagName('article');
-
   	const article = elements[0];
-
+    
     // 找到 article 内的所有 button 元素
     const btns = article.getElementsByTagName('button');
     if (btns.length < 2) {
@@ -48,3 +47,6 @@ async function doDelete() {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+//执行函数
+doDelete()
